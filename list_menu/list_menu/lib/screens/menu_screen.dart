@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:list_menu/screens/array_screen.dart';
+import 'package:list_menu/screens/login_screen.dart';
 import 'package:list_menu/screens/mision_screen.dart';
 import 'package:list_menu/screens/mapa_screen.dart';
+import 'package:list_menu/screens/rectangulo_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -53,6 +55,24 @@ class _MenuScreenState extends State<MenuScreen> {
         trailing:const Icon(Icons.navigate_next_outlined),
         onTap:(){//abrir otra screen
           final route=MaterialPageRoute(builder:(context)=>const ScreenArray());
+          Navigator.push(context,route);
+        },
+         ),
+           ListTile(title:const Text('Array'),
+        subtitle: const Text('Listar datos Array'),
+        leading: const Icon(Icons.list),
+        trailing:const Icon(Icons.navigate_next_outlined),
+        onTap:(){//abrir otra screen
+          final route=MaterialPageRoute(builder:(context)=>const RectanguloScreen());
+          Navigator.push(context,route);
+        },
+         ),
+          ListTile(title:const Text('Login'),
+        subtitle: const Text('Acceso a la aplicacion'),
+        leading: const Icon(Icons.list),
+        trailing:const Icon(Icons.navigate_next_outlined),
+        onTap:(){//abrir otra screen
+          final route=MaterialPageRoute(builder:(context)=>const LoginScreen());
           Navigator.push(context,route);
         },
          ),
